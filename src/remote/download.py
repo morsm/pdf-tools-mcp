@@ -3,7 +3,7 @@ import aiofiles
 import os
 import uuid
 
-DATA_DIR = "data"
+from config import DATA_DIR
 
 async def download_pdf(url):
     """
@@ -31,7 +31,7 @@ async def download_pdf(url):
                         await file.write(chunk)
 
         print(f"File downloaded successfully: {save_path}")
-        return f"File saved to {DATA_DIR}/{file_name}.pdf"
+        return f"File saved to {file_name}.pdf"
             
     except Exception as e:
         print(f"Error downloading the file: {e}")

@@ -1,19 +1,22 @@
 import fitz
 import logging
-import re
+from pathlib import Path
+
+from config import DATA_DIR, uuid4_pdf_re
 
 logger = logging.getLogger(__name__)
 
-pdf_in_data_folder_re = re.compile(r"^data/[^/]+\.pdf$")
 
-async def get_metadata(file_path: str):
+async def get_metadata(file_name: str):
     """
     Extract metadata and content from all pages of a PDF file.
     """
 
-    if not pdf_in_data_folder_re.match(file_path):
+    if not uuid4_pdf_re.match(file_name):
         logger.error("Input file must be in the 'data' folder and have a .pdf extension.")
         return False
+
+    file_path = Path(DATA_DIR, file_name)
 
 
     # Initialize result dictionary
@@ -48,6 +51,7 @@ async def get_metadata(file_path: str):
                 "page_number": page_num + 1,
                 "width": rect.width,
                 "height": rect.height,
+                "rotation": page.rotation,
             }
             
             result["pages"].append(page_info)
