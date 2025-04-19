@@ -2,8 +2,9 @@ import logging
 
 from mcp.server.fastmcp import FastMCP
 
-from remote.display import display_remote_document_page_as_image
 from local.display import display_page_as_image
+from local.merge import merge_pages
+from remote.display import display_remote_document_page_as_image
 from remote.download import download_pdf
 
 
@@ -14,6 +15,7 @@ mcp = FastMCP("pdf-tools")
 mcp.add_tool(display_remote_document_page_as_image)
 mcp.add_tool(display_page_as_image)
 mcp.add_tool(download_pdf)
+mcp.add_tool(merge_pages)
 
 def main():
     try:
