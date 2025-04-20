@@ -6,6 +6,7 @@ from local.display import display_page_as_image
 from local.merge import merge_pages
 from local.metadata import get_metadata
 from local.text import get_text_blocks, get_text_json
+from local.snippet import create_free_snippet, create_full_width_snippet
 
 from remote.display import display_remote_document_page_as_image
 from remote.download import download_pdf
@@ -20,6 +21,8 @@ mcp.add_tool(merge_pages)
 mcp.add_tool(get_metadata)
 mcp.add_tool(get_text_blocks)
 mcp.add_tool(get_text_json)
+mcp.add_tool(create_free_snippet)
+mcp.add_tool(create_full_width_snippet)
 
 mcp.add_tool(display_remote_document_page_as_image)
 mcp.add_tool(download_pdf)

@@ -3,7 +3,8 @@ import re
 DATA_DIR = "data"
 
 allowed_prefixes = [
-    "merged_"
+    "merged_",
+    "snippet_",
     # Add more prefixes here as needed
 ]
 # Join the prefixes with | for alternation and make the entire group optional

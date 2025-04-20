@@ -22,7 +22,7 @@ async def get_metadata(file_name: str):
     # Initialize result dictionary
     result = {
         "metadata": {},
-        "pages": []
+        "pages": [],
     }
     
     try:
