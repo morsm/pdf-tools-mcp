@@ -21,7 +21,7 @@ def create_snippet(source_page: fitz.Page, clip_rect: fitz.Rect) -> fitz.Documen
 
     return clipped
 
-async def create_free_snippet(file_name: str, clip_rect: Tuple[float, float, float, float], page_number: int = 0):
+async def create_free_snippet(file_name: str, clip_rect: Tuple[float, float, float, float], page_number: int = 1):
     """
     Create a free snippet of a PDF file and return it as a new PDF file. clip_rect is a tuple of (x0, y0, x1, y1) coordinates.
     """
@@ -66,7 +66,7 @@ async def create_free_snippet(file_name: str, clip_rect: Tuple[float, float, flo
     logger.info("Returning response of length: %s", len(str(response)))
     return response
 
-async def create_full_width_snippet(file_name: str, clip_rect: Tuple[float, float], page_number: int = 0):
+async def create_full_width_snippet(file_name: str, clip_rect: Tuple[float, float], page_number: int = 1):
     """
     Create a full-width snippet of a PDF file and return it as a new PDF file. clip_rect is a tuple of (y0, y1) coordinates.
     """

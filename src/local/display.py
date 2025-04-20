@@ -8,7 +8,7 @@ from config import DATA_DIR, uuid4_pdf_re
 
 logger = logging.getLogger(__name__)
 
-async def display_page_as_image(name: str, page_number: int):
+async def display_page_as_image(name: str, page_number: int = 1):
     """
     Display a specific page of a local PDF document.
     """

@@ -7,7 +7,7 @@ from mcp.server.fastmcp.utilities.types import Image
 
 logger = logging.getLogger(__name__)
 
-async def display_remote_document_page_as_image(url:str, page_number: int):
+async def display_remote_document_page_as_image(url:str, page_number: int = 1):
     """
     Display a specific page of a PDF document by its URL.
     """

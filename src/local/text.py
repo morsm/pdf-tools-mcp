@@ -8,7 +8,7 @@ from config import DATA_DIR, uuid4_pdf_re
 logger = logging.getLogger(__name__)
 
 
-async def get_text_blocks(file_name: str, page_number: int = 0):
+async def get_text_blocks(file_name: str, page_number: int = 1):
     """
     Extract text content from a specific page of a PDF file, in blocks. This contains the bounding box, text, number and type.
     """
@@ -51,7 +51,7 @@ async def get_text_blocks(file_name: str, page_number: int = 0):
 
     return response
 
-async def get_text_json(file_name: str, page_number: int = 0):
+async def get_text_json(file_name: str, page_number: int = 1):
     """
     Extract text content from a specific page of a PDF file, as json. This contains the most information.
     """
