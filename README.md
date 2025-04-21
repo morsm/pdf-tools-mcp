@@ -60,4 +60,4 @@ cz commit
 
 ## License
 
-[License details]
+MIT. See [LICENSE](LICENSE).
