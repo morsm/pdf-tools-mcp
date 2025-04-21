@@ -1,0 +1,27 @@
+name: Bump version and changelog
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  bump-version:
+    if: "!startsWith(github.event.head_commit.message, 'bump:') && github.ref_name == 'master'"
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.CI_PAT }}"
+      - id: cz
+        name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@a49cac8e98f3954a16e107f026f71cf84b17706c  # v0.23.1
+        with:
+          github_token: ${{ secrets.CI_PAT }}
+      - name: Print Version
+        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
