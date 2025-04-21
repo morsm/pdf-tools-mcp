@@ -1,3 +1,9 @@
+## 0.3.0 (2025-04-21)
+
+### Feat
+
+- **ci**: bump versions with commitizen
+
 ## 0.2.0 (2025-04-21)
 
 ### Feat
