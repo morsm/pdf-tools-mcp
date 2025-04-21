@@ -9,7 +9,6 @@ dependencies = [
     "aiohttp>=3.11.16",
     "mcp",
     "pymupdf>=1.25.5",
-    "python-magic-bin>=0.4.14",
     "requests>=2.32.3",
 ]
 
