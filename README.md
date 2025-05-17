@@ -1,5 +1,7 @@
 # PDF Tools MCP
 
+[![smithery badge](https://smithery.ai/badge/@danielkennedy1/pdf-tools-mcp)](https://smithery.ai/server/@danielkennedy1/pdf-tools-mcp)
+
 A comprehensive set of PDF manipulation tools built with the Model Context Protocol (MCP) framework.
 
 ## Features
@@ -18,6 +20,15 @@ A comprehensive set of PDF manipulation tools built with the Model Context Proto
 
 ## Installation
 
+### Installing via Smithery
+
+To install PDF Tools for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@danielkennedy1/pdf-tools-mcp):
+
+```bash
+npx -y @smithery/cli install @danielkennedy1/pdf-tools-mcp --client claude
+```
+
+### Manual Installation
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/pdf-tools-mcp.git
